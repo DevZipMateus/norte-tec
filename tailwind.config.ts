@@ -65,7 +65,7 @@ export default {
 				},
 				// Norte Tecnologia brand colors - baseado na logo
 				brand: {
-					red: '#e11d48', // Vermelho da logo (30%)
+					red: '#F9010B', // Vermelho da logo (30%) - updated color
 					gray: '#64748b', // Cinza da logo (10%)
 					lightGray: '#f8fafc', // Cinza claro para backgrounds (60%)
 					darkGray: '#334155', // Cinza escuro para textos
