@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Phone, Mail, MessageCircle, MapPin, Clock, Send, User, Building } from 'lucide-react';
 
@@ -14,18 +13,31 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Criar mensagem para WhatsApp
-    const message = `Olá! Vim através do site da Norte Tecnologia.
-    
-Nome: ${formData.name}
-Email: ${formData.email}
-Empresa: ${formData.company}
-Telefone: ${formData.phone}
+    // Criar mensagem estruturada para WhatsApp
+    const message = `🌟 *Nova Solicitação de Consultoria - Norte Tecnologia*
 
-Mensagem: ${formData.message}`;
+👤 *Nome:* ${formData.name}
+📧 *Email:* ${formData.email}
+🏢 *Empresa:* ${formData.company || 'Não informado'}
+📱 *Telefone:* ${formData.phone}
+
+💬 *Mensagem:*
+${formData.message}
+
+---
+_Mensagem enviada através do site www.nortecnologia.com_`;
 
     const whatsappUrl = `https://wa.me/5545998518223?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
+    
+    // Limpar formulário após envio
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      message: ''
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -203,7 +215,7 @@ Mensagem: ${formData.message}`;
                 >
                   <span className="flex items-center justify-center gap-2">
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    Enviar Mensagem
+                    Enviar via WhatsApp
                   </span>
                 </button>
               </form>
