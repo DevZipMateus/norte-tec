@@ -1,13 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Navigation } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -15,7 +12,6 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navigationItems = [{
     name: 'Início',
     href: '#inicio'
@@ -29,7 +25,6 @@ const Header = () => {
     name: 'Contato',
     href: '#contato'
   }];
-
   const handleNavClick = (href: string) => {
     setIsMenuOpen(false);
     const element = document.querySelector(href);
@@ -39,7 +34,6 @@ const Header = () => {
       });
     }
   };
-
   return <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg backdrop-blur-md' : 'backdrop-blur-sm'}`} style={{
     backgroundColor: '#F7F7F7'
   }} role="banner">
@@ -55,7 +49,7 @@ const Header = () => {
             e.preventDefault();
             handleNavClick('#inicio');
           }} className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300" aria-label="Norte Tecnologia - Página inicial">
-              <img src="/lovable-uploads/6296c6cc-d6ec-48d3-8833-92193359aa7a.png" alt="Norte Tecnologia - Logo" loading="eager" className="h-40 w-auto" />
+              <img src="/lovable-uploads/6296c6cc-d6ec-48d3-8833-92193359aa7a.png" alt="Norte Tecnologia - Logo" loading="eager" className="h-20 w-auto" />
             </a>
           </div>
 
@@ -112,5 +106,4 @@ const Header = () => {
       </nav>
     </header>;
 };
-
 export default Header;
