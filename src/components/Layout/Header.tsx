@@ -55,7 +55,7 @@ const Header = () => {
             e.preventDefault();
             handleNavClick('#inicio');
           }} className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300" aria-label="Norte Tecnologia - Página inicial">
-              <img src="/lovable-uploads/43aa2de3-5a05-4b01-9430-bf673aabe308.png" alt="Norte Tecnologia - Logo" loading="eager" className="h-12 md:h-14 w-auto" />
+              <img src="/lovable-uploads/6296c6cc-d6ec-48d3-8833-92193359aa7a.png" alt="Norte Tecnologia - Logo" loading="eager" className="h-40 w-auto" />
             </a>
           </div>
 
