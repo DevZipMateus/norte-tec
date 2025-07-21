@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -62,13 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				corporate: {
-					blue: '#1a1a1a', // Black for primary elements (60%)
-					lightBlue: '#d4af37', // Gold for secondary elements (30%)
-					darkBlue: '#111111', // Darker black for variation (60%)
-					gray: '#f8f9fa', // Light background
-					darkGray: '#343a40', // Dark text
-					accent: '#a67c00', // Darker gold for accents (10%)
+				// Norte Tecnologia brand colors - baseado na logo
+				brand: {
+					red: '#e11d48', // Vermelho da logo (30%)
+					gray: '#64748b', // Cinza da logo (10%)
+					lightGray: '#f8fafc', // Cinza claro para backgrounds (60%)
+					darkGray: '#334155', // Cinza escuro para textos
 				}
 			},
 			borderRadius: {
@@ -96,21 +96,21 @@ export default {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(10px)'
+						transform: 'translateY(20px)'
 					},
 					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
 				},
-				'fade-out': {
+				'fade-in-up': {
 					'0%': {
-						opacity: '1',
-						transform: 'translateY(0)'
+						opacity: '0',
+						transform: 'translateY(30px)'
 					},
 					'100%': {
-						opacity: '0',
-						transform: 'translateY(10px)'
+						opacity: '1',
+						transform: 'translateY(0)'
 					}
 				},
 				'scale-in': {
@@ -125,20 +125,12 @@ export default {
 				},
 				'slide-in': {
 					'0%': {
-						transform: 'translateY(20px)',
+						transform: 'translateX(-100%)',
 						opacity: '0'
 					},
 					'100%': {
-						transform: 'translateY(0)',
+						transform: 'translateX(0)',
 						opacity: '1'
-					}
-				},
-				'slide-in-right': {
-					'0%': {
-						transform: 'translateX(100%)'
-					},
-					'100%': {
-						transform: 'translateX(0)'
 					}
 				},
 				'float': {
@@ -146,30 +138,31 @@ export default {
 						transform: 'translateY(0)'
 					},
 					'50%': {
-						transform: 'translateY(-5px)'
+						transform: 'translateY(-10px)'
 					}
 				},
-				'pulse': {
+				'pulse-slow': {
 					'0%, 100%': {
-						opacity: '1',
-						transform: 'scale(1)'
+						opacity: '1'
 					},
 					'50%': {
-						opacity: '0.85',
-						transform: 'scale(1.05)'
+						opacity: '0.8'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out',
-				'fade-out': 'fade-out 0.5s ease-out',
-				'scale-in': 'scale-in 0.3s ease-out',
-				'slide-in': 'slide-in 0.5s ease-out',
-				'slide-in-right': 'slide-in-right 0.3s ease-out',
+				'fade-in': 'fade-in 0.8s ease-out',
+				'fade-in-up': 'fade-in-up 0.8s ease-out',
+				'scale-in': 'scale-in 0.5s ease-out',
+				'slide-in': 'slide-in 0.6s ease-out',
 				'float': 'float 3s ease-in-out infinite',
-				'pulse': 'pulse 2s ease-in-out infinite'
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'heading': ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
 			}
 		}
 	},
