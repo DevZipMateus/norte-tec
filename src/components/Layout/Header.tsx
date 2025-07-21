@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Navigation } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
@@ -50,10 +49,12 @@ const Header = () => {
             e.preventDefault();
             handleNavClick('#inicio');
           }} className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300" aria-label="Norte Tecnologia - Página inicial">
-              <img src="/lovable-uploads/6296c6cc-d6ec-48d3-8833-92193359aa7a.png" alt="Norte Tecnologia - Logo" loading="eager" className="h-40 w-auto" />
+              <img src="/lovable-uploads/6296c6cc-d6ec-48d3-8833-92193359aa7a.png" alt="Norte Tecnologia - Logo" loading="eager" className="h-20 w-auto" />
             </a>
           </div>
 
+          {/* Desktop Navigation, Mobile Menu Button, and Mobile Navigation */}
+          
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map(item => <a key={item.name} href={item.href} onClick={e => {
