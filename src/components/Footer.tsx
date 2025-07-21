@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail, MessageCircle, Instagram, Facebook, ArrowUp } from 'lucide-react';
 
@@ -15,7 +14,7 @@ const Footer = () => {
           <div className="lg:col-span-2 animate-fade-in-up">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/lovable-uploads/43aa2de3-5a05-4b01-9430-bf673aabe308.png" 
+                src="/lovable-uploads/6296c6cc-d6ec-48d3-8833-92193359aa7a.png" 
                 alt="Norte Tecnologia" 
                 className="h-8 w-auto"
               />
