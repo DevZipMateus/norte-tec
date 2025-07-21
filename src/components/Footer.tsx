@@ -16,7 +16,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/6296c6cc-d6ec-48d3-8833-92193359aa7a.png" 
                 alt="Norte Tecnologia" 
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
