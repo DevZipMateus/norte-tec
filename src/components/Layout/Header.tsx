@@ -35,8 +35,9 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg backdrop-blur-md' : 'bg-white/95 backdrop-blur-sm'
+        isScrolled ? 'shadow-lg backdrop-blur-md' : 'backdrop-blur-sm'
       }`}
+      style={{ backgroundColor: '#F7F7F7' }}
       role="banner"
     >
       <a href="#main-content" className="skip-link">
@@ -59,7 +60,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/43aa2de3-5a05-4b01-9430-bf673aabe308.png" 
                 alt="Norte Tecnologia - Logo" 
-                className="h-8 md:h-10 w-auto"
+                className="h-12 md:h-14 w-auto"
                 loading="eager"
               />
             </a>
@@ -116,7 +117,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200 animate-slide-in">
+          <div className="md:hidden border-t border-gray-200 animate-slide-in" style={{ backgroundColor: '#F7F7F7' }}>
             <div className="py-4 space-y-2">
               {navigationItems.map((item) => (
                 <a
