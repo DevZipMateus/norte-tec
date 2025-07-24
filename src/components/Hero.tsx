@@ -34,7 +34,7 @@ const Hero = () => {
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed animate-fade-in-up delay-300">
               Transformamos micro e pequenas empresas com{' '}
               <strong className="text-primary">sistemas de gestão personalizados</strong>.
-              Saiba do improviso e ganhe um rumo claro para crescer com segurança.
+              Saia do improviso e ganhe um rumo claro para crescer com segurança.
             </p>
             
             {/* Features */}
