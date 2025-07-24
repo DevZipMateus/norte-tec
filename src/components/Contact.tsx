@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Phone, Mail, MessageCircle, MapPin, Clock, Send, User, Building } from 'lucide-react';
 
@@ -80,7 +81,7 @@ _Mensagem enviada através do site www.nortecnologia.com_`;
 
   const businessHours = [
     { day: 'Segunda à Sexta', hours: '08:00 - 18:00' },
-    { day: 'Sábado', hours: '08:00 - 12:00' },
+    { day: 'Sábado', hours: 'Fechado' },
     { day: 'Domingo', hours: 'Fechado' }
   ];
 
